@@ -6,7 +6,7 @@
 			<deploy>
 				<type>svn</type>
 				<tag>trunk</tag>
-				<src>http://svn.rbc.ru/ppc/pifa/${config.libs.Pifa.deploy.tag}</src>
+				<src>https://github.com/bojik/PiFa.git/${config.libs.Pifa.deploy.tag}</src>
 				<dst>${config.paths.libs}/pifa/${config.libs.Pifa.deploy.tag}</dst>
 				<current>${config.paths.libs}/pifa/current</current>
 			</deploy>
