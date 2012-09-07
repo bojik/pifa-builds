@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="help">
+	
+	<target name="link-before">
+		<echo>custom project actions _before_ link</echo>
+	</target>
+	
+	<target name="link-after">
+	</target>
+</project>

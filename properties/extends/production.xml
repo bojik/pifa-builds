@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <build_type>production</build_type>
+    <paths>
+        <root>/www/pifa.in.rbc.ru</root>
+        <public>${config.paths.root}/htdocs</public>
+    </paths>
+    <hosts>
+        <root>pifa.in.rbc.ru</root>
+        <masters>pifa.in.rbc.ru</masters>
+    </hosts>
+    <libs>
+        <Pifa>
+            <plugin>Standart</plugin>
+            <deploy>
+                <tag>trunk</tag>
+            </deploy>
+            <modules>
+                <Db>
+                    <host>localhost</host>
+                    <dbname>pifa</dbname>
+                    <username>pifa</username>
+                    <password>nohp7Vahne</password>
+                </Db>
+            </modules>
+        </Pifa>
+    </libs>
+    <system>
+        <username>pifain-mnt</username>
+        <svn>
+            <username>pifain-mnt</username>
+            <password></password>
+        </svn>
+    </system>
+</config>

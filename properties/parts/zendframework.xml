@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <libs>
+        <ZendFramework>
+            <plugin>Zend</plugin>
+            <deploy>
+                <type><![CDATA[svn]]></type>
+                <tag><![CDATA[release-2.0.0]]></tag>
+				<src>https://github.com/zendframework/zf2.git/tags/${config.libs.ZendFramework.deploy.tag}/library</src>
+                <dst>${config.paths.libs}/zendframework/${config.libs.ZendFramework.deploy.tag}</dst>
+                <current>${config.paths.libs}/zendframework/current</current>
+                <keep_old_versions><![CDATA[2]]></keep_old_versions>
+            </deploy>
+        </ZendFramework>
+    </libs>
+</config>
