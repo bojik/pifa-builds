@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+	<paths>
+		<root>${get-build.deploy.root}</root>
+	</paths>
+	<hosts>
+		<root>${get-build.hosts.public}</root>
+	</hosts>
+	<system>
+		<username>${build.username}</username>
+	</system>
+    <libs>
+        <Pifa>
+            <modules>
+                <Db>
+                    <host>${install.db.host}</host>
+                    <dbname>${install.db.name}</dbname>
+                    <username>${install.db.username}</username>
+                    <password>${install.db.password}</password>
+                </Db>
+            </modules>
+        </Pifa>
+    </libs>
+</config>
