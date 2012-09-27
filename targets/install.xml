@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="help">
-	
+
 	<target name="install-before">
 		<echo>custom project actions _before_ install</echo>
+		<if>
+			<or>
+				<isset property="dbinit" />			
+				<not>
+					<available file="${build.dir.root}/tmp/db_prop" />
+				</not>
+			</or>
+			<then>
+				<if>
+					<isset property="dbhost" />
+					<then>
+						<property name="install.db.host" value="${dbhost}" />
+					</then>
+					<else>
+						<propertyprompt propertyName="install.db.host"
+							defaultValue="localhost" promptText="Tell me, please, your mysql host" />
+
+					</else>
+				</if>
+
+				<if>
+					<isset property="dbname" />
+					<then>
+						<property name="install.db.name" value="${dbname}" />
+					</then>
+					<else>
+						<propertyprompt propertyName="install.db.name"
+							defaultValue="pinba"
+							promptText="Tell me, please, your mysql database, where pinba is installed" />
+
+					</else>
+				</if>
+
+				<if>
+					<isset property="dbuser" />
+					<then>
+						<property name="install.db.username" value="${dbuser}" />
+					</then>
+					<else>
+						<propertyprompt propertyName="install.db.username"
+							defaultValue="root" promptText="Tell me, please, your mysql user" />
+
+					</else>
+				</if>
+
+				<if>
+					<isset property="dbpassword" />
+					<then>
+						<property name="install.db.password" value="${dbpassword}" />
+					</then>
+					<else>
+						<propertyprompt propertyName="install.db.password"
+							defaultValue="" promptText="Tell me, please, your a password of mysql user" />
+
+					</else>
+				</if>
+				
+				<copy file="${build.dir.root}/properties/extends/users/example.xml.tpl" 
+					tofile="${build.dir.root}/properties/extends/users/${build.user}.xml"
+					overwrite="true">
+					<filterchain>
+						<expandproperties />
+					</filterchain>
+				</copy>
+				
+				<touch file="${build.dir.root}/tmp/db_prop" millis="1" />
+			</then>
+		</if>
 	</target>
-	
+
 	<target name="install-after">
 		<echo>custom project actions _after_ install</echo>
 	</target>
-	
+
 </project>

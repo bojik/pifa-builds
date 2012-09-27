@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<config>	
+<config>
 	<paths>
-		<root>${born-properties.paths.root}</root>
+		<root>${config.paths.root}</root>
 	</paths>
 	<hosts>
-		<root>${born-build.hosts.public}</root>
+		<root>${config.hosts.public}</root>
 	</hosts>
 	<system>
 		<username>${build.username}</username>
@@ -13,10 +13,10 @@
         <Pifa>
             <modules>
                 <Db>
-                    <host>${born-properties.db.host}</host>
-                    <dbname>${born-properties.db.name}</dbname>
-                    <username>${born-properties.db.username}</username>
-                    <password>${born-properties.db.password}</password>
+                    <host>${install.db.host}</host>
+                    <dbname>${install.db.name}</dbname>
+                    <username>${install.db.username}</username>
+                    <password>${install.db.password}</password>
                 </Db>
             </modules>
         </Pifa>
