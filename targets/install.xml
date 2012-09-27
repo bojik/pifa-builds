@@ -58,16 +58,7 @@
 							defaultValue="" promptText="Tell me, please, your a password of mysql user" />
 
 					</else>
-				</if>
-				
-				<copy file="${build.dir.root}/properties/extends/users/example.xml.tpl" 
-					tofile="${build.dir.root}/properties/extends/users/${build.user}.xml"
-					overwrite="true">
-					<filterchain>
-						<expandproperties />
-					</filterchain>
-				</copy>
-				
+				</if>				
 				<touch file="${build.dir.root}/tmp/db_prop" millis="1" />
 			</then>
 		</if>
