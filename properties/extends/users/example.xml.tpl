@@ -13,10 +13,10 @@
         <Pifa>
             <modules>
                 <Db>
-                    <host></host>
-                    <dbname></dbname>
-                    <username></username>
-                    <password></password>
+                    <host>${born-properties.db.host}</host>
+                    <dbname>${born-properties.db.name}</dbname>
+                    <username>${born-properties.db.username}</username>
+                    <password>${born-properties.db.password}</password>
                 </Db>
             </modules>
         </Pifa>
