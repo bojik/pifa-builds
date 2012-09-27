@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>	
+	<paths>
+		<root>${born-properties.paths.root}</root>
+	</paths>
+	<hosts>
+		<root>${born-build.hosts.public}</root>
+	</hosts>
+	<system>
+		<username>${build.username}</username>
+	</system>
+    <libs>
+        <Pifa>
+            <modules>
+                <Db>
+                    <host></host>
+                    <dbname></dbname>
+                    <username></username>
+                    <password></password>
+                </Db>
+            </modules>
+        </Pifa>
+    </libs>
+</config>

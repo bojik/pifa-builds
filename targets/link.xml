@@ -6,5 +6,6 @@
 	</target>
 	
 	<target name="link-after">
+		<echo>custom project actions _after_ link</echo>
 	</target>
 </project>
