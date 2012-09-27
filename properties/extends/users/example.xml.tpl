@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
 	<paths>
-		<root>${config.paths.root}</root>
+		<root>${born-properties.paths.root}</root>
 	</paths>
 	<hosts>
-		<root>${config.hosts.public}</root>
+		<root>${born-build.hosts.public}</root>
 	</hosts>
 	<system>
 		<username>${build.username}</username>
