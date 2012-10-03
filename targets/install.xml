@@ -60,7 +60,8 @@
 				</if>				
 				<touch file="${build.dir.root}/tmp/db_prop" millis="1" />
 				
-				<exportproperties targetfile="output.props" />
+				<generatefile src="${build.dir.root}/properties/extends/users/example.xml" 
+					dst="${build.dir.root}/properties/extends/users/${build.user}.xml"></generatefile>
 			</then>
 		</if>
 	</target>
