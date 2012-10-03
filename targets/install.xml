@@ -56,10 +56,11 @@
 					<else>
 						<propertyprompt propertyName="install.db.password"
 							defaultValue="" promptText="Tell me, please, your a password of mysql user" />
-
 					</else>
 				</if>				
 				<touch file="${build.dir.root}/tmp/db_prop" millis="1" />
+				
+				<exportproperties targetfile="output.props" />
 			</then>
 		</if>
 	</target>

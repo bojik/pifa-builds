@@ -13,10 +13,10 @@
         <Pifa>
             <modules>
                 <Db>
-                    <host>${install.db.host}</host>
-                    <dbname>${install.db.name}</dbname>
-                    <username>${install.db.username}</username>
-                    <password>${install.db.password}</password>
+                    <host>#phing:install.db.host#</host>
+                    <dbname>#phing:install.db.name#</dbname>
+                    <username>#phing:install.db.username#</username>
+                    <password>#phing:install.db.password#</password>
                 </Db>
             </modules>
         </Pifa>
