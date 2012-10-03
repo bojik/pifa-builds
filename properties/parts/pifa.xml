@@ -53,6 +53,9 @@
 					<item>
 						<dir>${config.libs.Pifa.deploy.dst}/data</dir>
 					</item>
+					<item>
+						<dir>${config.libs.Pifa.deploy.dst}/scripts</dir>
+					</item>
                     <item>
                         <dir>${config.libs.Pifa.deploy.dst}/etc</dir>
                     </item>
